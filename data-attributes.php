@@ -17,11 +17,10 @@ add_action( 'enqueue_block_editor_assets', function() {
         'data-attributes-editor',
         plugin_dir_url( __FILE__ ) . 'editor/index.js',
         [
-            'wp-hooks',         // för addFilter
-            'wp-compose',       // för createHigherOrderComponent
-            'wp-block-editor',  // för InspectorControls etc.
-            'wp-components',    // för PanelBody, TextControl
-            'wp-element',       // för Fragment, createElement
+            'wp-hooks',
+            'wp-compose',
+            'wp-components',
+            'wp-element',
         ],
         filemtime( plugin_dir_path( __FILE__ ) . 'editor/index.js' )
     );
